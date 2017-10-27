@@ -1,7 +1,12 @@
+import os
+
 #from flask import Flask
 #app = Flask(__name__)
 
-todolist = open("G:\\git\\code\\todo.md")
+dir = os.path.dirname(__file__)
+filename = os.path.join(dir, 'todo.md')
+
+todolist = open(filename)
 items = []
 
 for line in todolist:
